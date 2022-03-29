@@ -1,0 +1,154 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+main {
+  margin-right: 2rem;
+  margin-left: 2rem;
+  @include m.telefono {
+    margin-right: 5rem;
+    margin-left: 5rem;
+  }
+  @include m.desktopXL {
+    margin-right: 10rem;
+    margin-left: 10rem;
+  }
+}
+
+.home-div {
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+  .imagen {
+    margin: 2rem;
+    @include m.tablet {
+      margin: unset;
+    }
+  }
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 3rem;
+  }
+  @include m.desktop {
+    grid-template-columns: 3fr 1fr;
+    margin-top: 5rem;
+  }
+  @include m.desktopXL {
+    margin-top: 7.5rem;
+  }
+}
+
+.home-left {
+  .imagen {
+    @include m.tablet {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include m.desktop {
+      width: 70%;
+    }
+  }
+  h2 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  @include m.tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.home-right {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20rem;
+  @include m.tablet {
+    width: unset;
+  }
+}
+
+.info {
+  margin-bottom: 4rem;
+  @include m.tablet {
+    height: 20rem;
+  }
+  @include m.desktopXL {
+    margin-bottom: 10rem;
+  }
+  text-align: center;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  li {
+    padding: 1rem 0.5rem;
+  }
+}
+
+.home-3D,
+.home-exo,
+.home-humanoid {
+  display: flex;
+  p {
+    color: v.$oscuro;
+  }
+  .imagen {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.project {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  flex-direction: column;
+  .text-project {
+    order: 1;
+    p {
+      text-align: justify;
+      padding-top: 1rem;
+    }
+  }
+  .imagen-project {
+    order: 2;
+  }
+  .logo-exo {
+    width: 17rem;
+    padding: 2rem 4rem;
+    @include m.telefono {
+      width: 20rem;
+    }
+  }
+  .logo-3D,
+  .logo-humanoid {
+    padding: 2rem;
+    @include m.telefono {
+      width: 70vw;
+    }
+    @include m.tablet {
+      width: 100%;
+    }
+  }
+  @include m.tablet {
+    flex-direction: row;
+    .text-project {
+      order: unset;
+    }
+    .imagen-project {
+      order: unset;
+    }
+  }
+}
+
+.home-3D,
+.home-humanoid {
+  .imagen-project {
+    @include m.tablet {
+      width: 250rem;
+    }
+    @include m.desktopXL {
+      width: 150rem;
+    }
+  }
+}

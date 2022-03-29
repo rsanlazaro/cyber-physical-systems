@@ -1,0 +1,45 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+/* The hero image */
+.hero-image {
+    z-index: -1;
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: url('../../build/img/hero/hero2.webp');
+  
+    /* Set a specific height */
+    height: 15rem;
+    @include m.tablet {
+        height: 20rem;
+    }
+    @include m.desktop {
+        height: 40rem;
+    }
+  
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  /* Place text in the middle of the image */
+  .hero-text {
+    font-weight: bold;
+    color: v.$blanco;
+    font-size: 2.5rem;
+    @include m.desktop {
+        font-size: 5rem;
+    }
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    @include m.desktop {
+        top: 55%;
+    }
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

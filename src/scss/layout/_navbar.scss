@@ -131,6 +131,9 @@
   display: block;
   font-size: 1rem;
   max-width: 90%;
+  @include m.telefono {
+    font-size: 1.25rem;
+  }
   @include m.tablet {
     font-size: 1.5rem;
   }

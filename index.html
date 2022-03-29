@@ -20,7 +20,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar navbar-light xs-display sidebar">
             <div>
@@ -51,9 +51,11 @@
                   ></button>
                 </div>
                 <div class="offcanvas-body bg-dark">
-                  <ul class="navbar-nav nav-sb justify-content-end flex-grow-1 pe-3">
+                  <ul
+                    class="navbar-nav nav-sb justify-content-end flex-grow-1 pe-3"
+                  >
                     <li class="nav-item active">
-                      <a class="nav-link sidebar-menu" href="#">Home </a>
+                      <a class="nav-link sidebar-menu" href="/">Home </a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link sidebar-menu" href="#"> About </a>
@@ -62,58 +64,39 @@
                       <a class="nav-link sidebar-menu" href="#"> Students </a>
                     </li>
                     <li class="nav-item dropdown sidebar-drop" id="myDropdown">
-                      <a
-                        class="sidebar-menu"
-                        href="#news"
-                      >
-                        News
-                      </a>
+                      <a class="sidebar-menu" href="#news"> News </a>
                       <a
                         class="sidebar-menu dropdown-toggle"
                         href="#news"
                         data-bs-toggle="collapse"
                       >
-                        
                       </a>
                       <ul class="dropdown-menu menu-sb bg-dark" id="news">
                         <li>
-                          <a class="dropdown-item" href="#">
-                            Videos
-                          </a>
+                          <a class="dropdown-item" href="#"> Videos </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#">
-                            Press
-                          </a>
+                          <a class="dropdown-item" href="#"> Press </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#">
-                            Divulgation
-                          </a>
+                          <a class="dropdown-item" href="#"> Divulgation </a>
                         </li>
                       </ul>
                     </li>
                     <li class="nav-item dropdown sidebar-drop" id="myDropdown">
-                      <a
-                        class="sidebar-menu"
-                        href="#research"
-                      >
-                        Research
-                      </a>  
+                      <a class="sidebar-menu" href="#research"> Research </a>
                       <a
                         class="sidebar-menu dropdown-toggle"
                         href="#"
                         data-bs-toggle="collapse"
                         data-bs-target="#research"
-                        aria-expanded="false" aria-controls="collapseExample"
+                        aria-expanded="false"
+                        aria-controls="collapseExample"
                       >
-                        
-                      </a>  
+                      </a>
                       <ul class="dropdown-menu menu-sb bg-dark" id="research">
                         <li>
-                          <a class="dropdown-item" href="#">
-                            Collaboration
-                          </a>
+                          <a class="dropdown-item" href="#"> Collaboration </a>
                         </li>
                         <li class="left-pad">
                           <a
@@ -128,7 +111,10 @@
                             data-bs-toggle="collapse"
                           >
                           </a>
-                          <ul class="dropdown-menu menu-sb bg-dark" id="degrees">
+                          <ul
+                            class="dropdown-menu menu-sb bg-dark"
+                            id="degrees"
+                          >
                             <li>
                               <a class="dropdown-item" href="#"
                                 >Undergraduate</a
@@ -140,21 +126,15 @@
                               >
                             </li>
                             <li>
-                              <a class="dropdown-item" href="#"
-                                >PhD projects</a
-                              >
+                              <a class="dropdown-item" href="#">PhD projects</a>
                             </li>
                           </ul>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#">
-                            Resources
-                          </a>
+                          <a class="dropdown-item" href="#"> Resources </a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#">
-                            Papers
-                          </a>
+                          <a class="dropdown-item" href="#"> Papers </a>
                         </li>
                         <li>
                           <a class="dropdown-item" href="#">
@@ -180,18 +160,16 @@
           <a class="navbar-brand navbar-text" href="/"
             >Cyber-Physical Human Systems Laboratory</a
           >
-          <div class="float-right bg-dark">
+          <div class="float-right">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Home </a>
+                <a class="nav-link" href="/">Home </a>
               </li>
               <li class="nav-item"><a class="nav-link" href="#"> About </a></li>
               <li class="nav-item">
                 <a class="nav-link" href="#"> Students </a>
               </li>
-              <li class="blank-space-news">
-
-              </li>
+              <li class="blank-space-news"></li>
               <li class="nav-item nav-item-close-news">
                 <a class="nav-link" href="#"> News </a>
               </li>
@@ -201,7 +179,6 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                  
                 </a>
                 <ul class="dropdown-menu dropdown-menu-news menu bg-dark">
                   <li>
@@ -217,9 +194,7 @@
                   </li>
                 </ul>
               </li>
-              <li class="blank-space-research">
-
-              </li>
+              <li class="blank-space-research"></li>
               <li class="nav-item nav-item-close-research">
                 <a class="nav-link" href="#"> Research </a>
               </li>
@@ -229,7 +204,6 @@
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                  
                 </a>
                 <ul class="dropdown-menu dropdown-menu-research menu bg-dark">
                   <li>
@@ -244,7 +218,9 @@
                     >
                       Projects
                     </a>
-                    <ul class="submenu dropdown-menu dropdown-submenu-research bg-dark">
+                    <ul
+                      class="submenu dropdown-menu dropdown-submenu-research bg-dark"
+                    >
                       <li>
                         <a class="dropdown-item text-light" href="#"
                           >Undergraduate</a
@@ -285,6 +261,141 @@
         <!-- container-fluid.// -->
       </nav>
     </header>
+    <div class="hero-image">
+      <div class="hero-text">Home</div>
+    </div>
+    <main>
+      <div class="home-div">
+        <div class="home-left">
+          <div class="imagen">
+            <picture>
+              <source
+                srcset="build/img/home/logo_cyberphysical.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="build/img/home/logo_cyberphysical.jpg"
+                type="image/jpeg"
+              />
+              <img
+                loading="lazy"
+                src="build/img/home/logo_cyberphysical.jpg"
+                alt="Logo"
+              />
+            </picture>
+          </div>
+          <div class="info">
+            <h2>Flagship projects</h2>
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item">Dynamic Exo-systems for Humans</li>
+              <li class="list-group-item">Smart 3D Additive Manufacturing</li>
+              <li class="list-group-item">Human-to-humanoid Project</li>
+            </ol>
+          </div>
+        </div>
+        <div class="home-right">
+          <div class="imagen">
+            <picture>
+              <source srcset="build/img/home/photo.webp" type="image/webp" />
+              <source srcset="build/img/home/photo.jpg" type="image/jpeg" />
+              <img
+                loading="lazy"
+                src="build/img/home/photo.jpg"
+                alt="Building"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="home-projects">
+        <div class="home-exo project">
+          <div class="text-exo text-project">
+            <h3>Dynamic Exo-Systems for Humans</h3>
+            <p>
+              This area is centered in the development of projects focused on
+              healthcare with the aim of developing external rehabilitation
+              systems that people or health professionals can use to improve
+              life quality of the population. The projects developed within the
+              scope of this department include differential neural networks of
+              finite element for the study of deformation of soft objects, and
+              physiological signals classification for interaction in virtual
+              reality systems for the control of robotic manipulators and mobile
+              robots.
+            </p>
+          </div>
+          <div class="imagen imagen-project">
+            <picture>
+              <source srcset="build/img/home/logo_exo.webp" type="image/webp" />
+              <source srcset="build/img/home/logo_exo.jpg" type="image/jpeg" />
+              <img
+                class="logo-exo"
+                loading="lazy"
+                src="build/img/home/logo_exo.jpg"
+                alt="Logo"
+              />
+            </picture>
+          </div>
+        </div>
+        <div class="home-3D project">
+          <div class="imagen imagen-project">
+            <picture>
+              <source srcset="build/img/home/logo_3D.webp" type="image/webp" />
+              <source srcset="build/img/home/logo_3D.jpg" type="image/jpeg" />
+              <img class="logo-3D" loading="lazy" src="build/img/home/logo_3D.jpg" alt="Logo" />
+            </picture>
+          </div>
+          <div class="text-3D text-project">
+            <h3>Dynamic Exo-Systems for Humans</h3>
+            <p>
+              This area is centered in the development of projects focused on
+              healthcare with the aim of developing external rehabilitation
+              systems that people or health professionals can use to improve
+              life quality of the population. The projects developed within the
+              scope of this department include differential neural networks of
+              finite element for the study of deformation of soft objects, and
+              physiological signals classification for interaction in virtual
+              reality systems for the control of robotic manipulators and mobile
+              robots.
+            </p>
+          </div>
+        </div>
+        <div class="home-humanoid project">
+          <div class="text-humanoid text-project">
+            <h3>Dynamic Exo-Systems for Humans</h3>
+            <p>
+              This area is centered in the development of projects focused on
+              healthcare with the aim of developing external rehabilitation
+              systems that people or health professionals can use to improve
+              life quality of the population. The projects developed within the
+              scope of this department include differential neural networks of
+              finite element for the study of deformation of soft objects, and
+              physiological signals classification for interaction in virtual
+              reality systems for the control of robotic manipulators and mobile
+              robots.
+            </p>
+          </div>
+          <div class="imagen imagen-project">
+            <picture>
+              <source
+                srcset="build/img/home/logo_humanoid.webp"
+                type="image/webp"
+              />
+              <source
+                srcset="build/img/home/logo_humanoid.jpg"
+                type="image/jpeg"
+              />
+              <img
+                class="logo-humanoid"
+                loading="lazy"
+                src="build/img/home/logo_humanoid.jpg"
+                alt="Logo"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <script src="build/js/bundle.min.js"></script>
   </body>
 </html>
