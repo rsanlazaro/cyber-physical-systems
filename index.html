@@ -20,13 +20,167 @@
   </head>
   <body>
     <header>
-      
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/"
-            >Cyber-physical Human Systems Laboratory</a
+          <div class="navbar navbar-light xs-display sidebar">
+            <div>
+              <button
+                class="navbar-toggler right-position nav-button"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="offcanvas offcanvas-start offcanvas-padding"
+                tabindex="-1"
+                id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel"
+              >
+                <div class="offcanvas-header bg-dark text-light">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                    Menú
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close btn-close-white text-resett"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body bg-dark">
+                  <ul class="navbar-nav nav-sb justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item active">
+                      <a class="nav-link sidebar-menu" href="#">Home </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link sidebar-menu" href="#"> About </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link sidebar-menu" href="#"> Students </a>
+                    </li>
+                    <li class="nav-item dropdown sidebar-drop" id="myDropdown">
+                      <a
+                        class="sidebar-menu"
+                        href="#news"
+                      >
+                        News
+                      </a>
+                      <a
+                        class="sidebar-menu dropdown-toggle"
+                        href="#news"
+                        data-bs-toggle="collapse"
+                      >
+                        
+                      </a>
+                      <ul class="dropdown-menu menu-sb bg-dark" id="news">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            Videos
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            Press
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            Divulgation
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown sidebar-drop" id="myDropdown">
+                      <a
+                        class="sidebar-menu"
+                        href="#research"
+                      >
+                        Research
+                      </a>  
+                      <a
+                        class="sidebar-menu dropdown-toggle"
+                        href="#"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#research"
+                        aria-expanded="false" aria-controls="collapseExample"
+                      >
+                        
+                      </a>  
+                      <ul class="dropdown-menu menu-sb bg-dark" id="research">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            Collaboration
+                          </a>
+                        </li>
+                        <li class="left-pad">
+                          <a
+                            class="dropdown-item dropdown-item-opt"
+                            href="#projects"
+                          >
+                            Projects
+                          </a>
+                          <a
+                            class="dropdown-item dropdown-toggle dropdown-item-opt"
+                            href="#degrees"
+                            data-bs-toggle="collapse"
+                          >
+                          </a>
+                          <ul class="dropdown-menu menu-sb bg-dark" id="degrees">
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Undergraduate</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >Master projects</a
+                              >
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#"
+                                >PhD projects</a
+                              >
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            Resources
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            Papers
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            Three Minute Thesis
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link sidebar-menu sidebar-last" href="#">
+                        Technological Development
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a class="navbar-brand sidebar-text" href="/"
+            >Cyber-Physical Systems Laboratory</a
           >
-          <div class="float-right bg-dark" id="main_nav">
+          <a class="navbar-brand navbar-text" href="/"
+            >Cyber-Physical Human Systems Laboratory</a
+          >
+          <div class="float-right bg-dark">
             <ul class="navbar-nav">
               <li class="nav-item active">
                 <a class="nav-link" href="#">Home </a>
@@ -35,15 +189,21 @@
               <li class="nav-item">
                 <a class="nav-link" href="#"> Students </a>
               </li>
+              <li class="blank-space-news">
+
+              </li>
+              <li class="nav-item nav-item-close-news">
+                <a class="nav-link" href="#"> News </a>
+              </li>
               <li class="nav-item dropdown" id="myDropdown">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                  News
+                  
                 </a>
-                <ul class="dropdown-menu menu bg-dark">
+                <ul class="dropdown-menu dropdown-menu-news menu bg-dark">
                   <li>
                     <a class="dropdown-item text-light" href="#"> Videos </a>
                   </li>
@@ -57,15 +217,21 @@
                   </li>
                 </ul>
               </li>
+              <li class="blank-space-research">
+
+              </li>
+              <li class="nav-item nav-item-close-research">
+                <a class="nav-link" href="#"> Research </a>
+              </li>
               <li class="nav-item dropdown" id="myDropdown">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
                   data-bs-toggle="dropdown"
                 >
-                  Research
+                  
                 </a>
-                <ul class="dropdown-menu menu bg-dark">
+                <ul class="dropdown-menu dropdown-menu-research menu bg-dark">
                   <li>
                     <a class="dropdown-item text-light" href="#">
                       Collaboration
@@ -78,7 +244,7 @@
                     >
                       Projects
                     </a>
-                    <ul class="submenu dropdown-menu bg-dark">
+                    <ul class="submenu dropdown-menu dropdown-submenu-research bg-dark">
                       <li>
                         <a class="dropdown-item text-light" href="#"
                           >Undergraduate</a
@@ -117,48 +283,6 @@
           <!-- navbar-collapse.// -->
         </div>
         <!-- container-fluid.// -->
-      </nav>
-
-      <nav class="navbar navbar-light fixed-top xs-display">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler right-position nav-button"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-end offcanvas-padding"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-              <button
-                type="button"
-                class="btn-close text-reset"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="index.html"
-                    >Inicio</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </nav>
     </header>
     <script src="build/js/bundle.min.js"></script>
