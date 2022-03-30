@@ -71,6 +71,10 @@ main {
   }
 }
 
+.accordion-title{
+  margin-bottom: 3rem;
+}
+
 .accordion{
   @include m.desktopXL {
     width: 90rem;
@@ -116,9 +120,9 @@ main {
   }
 }
 
-.mail {
+address {
   text-align: center;
-  font-weight: bold;
+  // font-weight: bold;
   margin-top: 2rem;
 }
 
