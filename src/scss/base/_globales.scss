@@ -50,23 +50,13 @@ p {
   margin: 0 auto;
 }
 
+.main-container {
+  margin-top: 2.5rem;
+}
+
 a {
   text-decoration: none;
 }
-
-// .boton {
-//   background-color: v.$primario;
-//   color: v.$oscuro;
-//   padding: 1rem 3rem;
-//   margin-top: 1rem;
-//   font-size: 2rem;
-//   text-decoration: none;
-//   text-transform: uppercase;
-//   font-weight: bold;
-//   border-radius: 0.5rem;
-//   text-align: center;
-//   border: none;
-// }
 
 .accordion-button {
   font-size: 1.35rem;
@@ -122,6 +112,19 @@ h3 {
   }
 }
 
+a {
+  font-size: 1.6rem;
+  @include m.telefono {
+    font-size: 1.75rem;
+  }
+  @include m.tablet {
+    font-size: 2rem;
+  }
+  @include m.desktop {
+    font-size: 2.15rem;
+  }
+}
+
 img {
   width: 100%;
 }
@@ -129,4 +132,10 @@ img {
 .imagen {
   margin-left: auto;
   margin-right: auto;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 2rem 0;
 }
