@@ -16,7 +16,19 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
     <link rel="stylesheet" href="build/css/app.css" />
+    <script src="build/js/bundle.min.js"></script>
   </head>
   <body>
     <header>
@@ -266,135 +278,204 @@
     </div>
     <main>
       <div class="home-div">
-        <div class="home-left">
-          <div class="imagen">
-            <picture>
-              <source
-                srcset="build/img/home/logo_cyberphysical.webp"
-                type="image/webp"
-              />
-              <source
-                srcset="build/img/home/logo_cyberphysical.jpg"
-                type="image/jpeg"
-              />
-              <img
-                loading="lazy"
-                src="build/img/home/logo_cyberphysical.jpg"
-                alt="Logo"
-              />
-            </picture>
-          </div>
-          <div class="info">
-            <h2>Flagship projects</h2>
-            <ol class="list-group list-group-numbered">
-              <li class="list-group-item">Dynamic Exo-systems for Humans</li>
-              <li class="list-group-item">Smart 3D Additive Manufacturing</li>
-              <li class="list-group-item">Human-to-humanoid Project</li>
-            </ol>
-          </div>
+        <div class="imagen">
+          <picture>
+            <source
+              srcset="build/img/home/logo_cyberphysical.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="build/img/home/logo_cyberphysical.jpg"
+              type="image/jpeg"
+            />
+            <img
+              loading="lazy"
+              src="build/img/home/logo_cyberphysical.jpg"
+              alt="Logo"
+            />
+          </picture>
         </div>
-        <div class="home-right">
-          <div class="imagen">
-            <picture>
-              <source srcset="build/img/home/photo.webp" type="image/webp" />
-              <source srcset="build/img/home/photo.jpg" type="image/jpeg" />
-              <img
-                loading="lazy"
-                src="build/img/home/photo.jpg"
-                alt="Building"
-              />
-            </picture>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne"
+                aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseOne"
+              >
+                Dynamic Exo-systems for Humans
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="panelsStayOpen-headingOne"
+            >
+              <div class="accordion-body">
+                <div class="accordion-text">
+                  This area is centered in the development of projects focused
+                  on healthcare with the aim of developing external
+                  rehabilitation systems that people or health professionals can
+                  use to improve life quality of the population. The projects
+                  developed within the scope of this department include
+                  differential neural networks of finite element for the study
+                  of deformation of soft objects, and physiological signals
+                  classification for interaction in virtual reality systems for
+                  the control of robotic manipulators and mobile robots.
+                </div>
+                <div class="accordion-image">
+                  <picture>
+                    <source
+                      srcset="build/img/home/logo_exo.webp"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="build/img/home/logo_exo.jpg"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="logo-exo"
+                      loading="lazy"
+                      src="build/img/home/logo_exo.jpg"
+                      alt="Logo"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo"
+              >
+                Smart 3D Additive Manufacturing
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingTwo"
+            >
+              <div class="accordion-body">
+                <div class="accordion-text">
+                  This area involves experimentation with new materials
+                  combinations, development of technologies for composed
+                  materials printing, generation of new paterns and internal
+                  support structures for pieces printing, and biomaterials
+                  printing, among others. These are some of the projects that
+                  can be developed in this laboratory.
+                </div>
+                <div class="accordion-image accordion-3D">
+                  <picture>
+                    <source
+                      srcset="build/img/home/logo_3D.webp"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="build/img/home/logo_3D.jpg"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="logo-3D"
+                      loading="lazy"
+                      src="build/img/home/logo_3D.jpg"
+                      alt="Logo"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree"
+                aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree"
+              >
+                Human-to-humanoid Project
+              </button>
+            </h2>
+            <div
+              id="panelsStayOpen-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingThree"
+            >
+              <div class="accordion-body">
+                <div class="accordion-text">
+                  The "Human to Humanoid Project" started with the design of a
+                  humanoid robot with anthropometric proportions, which, apart
+                  from its original purpose, it serves as a prototipe for
+                  testing algorithms regarding automatic control, artificial
+                  vision, path planning, navigation and artificial intelligence.
+                  The scope of this project includes mechanical design, control
+                  and power electronic boards design, user interfaces, flexible
+                  and collaborative manufacture, industry 4.0 and, recently,
+                  affective computing.
+                </div>
+                <div class="accordion-image">
+                  <picture>
+                    <source
+                      srcset="build/img/home/logo_humanoid.webp"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="build/img/home/logo_humanoid.jpg"
+                      type="image/jpeg"
+                    />
+                    <img
+                      class="logo-humanoid"
+                      loading="lazy"
+                      src="build/img/home/logo_humanoid.jpg"
+                      alt="Logo"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="home-projects">
-        <div class="home-exo project">
-          <div class="text-exo text-project">
-            <h3>Dynamic Exo-Systems for Humans</h3>
-            <p>
-              This area is centered in the development of projects focused on
-              healthcare with the aim of developing external rehabilitation
-              systems that people or health professionals can use to improve
-              life quality of the population. The projects developed within the
-              scope of this department include differential neural networks of
-              finite element for the study of deformation of soft objects, and
-              physiological signals classification for interaction in virtual
-              reality systems for the control of robotic manipulators and mobile
-              robots.
-            </p>
-          </div>
-          <div class="imagen imagen-project">
-            <picture>
-              <source srcset="build/img/home/logo_exo.webp" type="image/webp" />
-              <source srcset="build/img/home/logo_exo.jpg" type="image/jpeg" />
-              <img
-                class="logo-exo"
-                loading="lazy"
-                src="build/img/home/logo_exo.jpg"
-                alt="Logo"
-              />
-            </picture>
-          </div>
+      <div class="home-location">
+        <div id="map"></div>
+        <div class="imagen location-image">
+          <picture>
+            <source
+              srcset="build/img/home/photo.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="build/img/home/photo.jpg"
+              type="image/jpeg"
+            />
+            <img
+              class="logo-3D"
+              loading="lazy"
+              src="build/img/home/photo.jpg"
+              alt="Logo"
+            />
+          </picture>
         </div>
-        <div class="home-3D project">
-          <div class="imagen imagen-project">
-            <picture>
-              <source srcset="build/img/home/logo_3D.webp" type="image/webp" />
-              <source srcset="build/img/home/logo_3D.jpg" type="image/jpeg" />
-              <img class="logo-3D" loading="lazy" src="build/img/home/logo_3D.jpg" alt="Logo" />
-            </picture>
-          </div>
-          <div class="text-3D text-project">
-            <h3>Dynamic Exo-Systems for Humans</h3>
-            <p>
-              This area is centered in the development of projects focused on
-              healthcare with the aim of developing external rehabilitation
-              systems that people or health professionals can use to improve
-              life quality of the population. The projects developed within the
-              scope of this department include differential neural networks of
-              finite element for the study of deformation of soft objects, and
-              physiological signals classification for interaction in virtual
-              reality systems for the control of robotic manipulators and mobile
-              robots.
-            </p>
-          </div>
-        </div>
-        <div class="home-humanoid project">
-          <div class="text-humanoid text-project">
-            <h3>Dynamic Exo-Systems for Humans</h3>
-            <p>
-              This area is centered in the development of projects focused on
-              healthcare with the aim of developing external rehabilitation
-              systems that people or health professionals can use to improve
-              life quality of the population. The projects developed within the
-              scope of this department include differential neural networks of
-              finite element for the study of deformation of soft objects, and
-              physiological signals classification for interaction in virtual
-              reality systems for the control of robotic manipulators and mobile
-              robots.
-            </p>
-          </div>
-          <div class="imagen imagen-project">
-            <picture>
-              <source
-                srcset="build/img/home/logo_humanoid.webp"
-                type="image/webp"
-              />
-              <source
-                srcset="build/img/home/logo_humanoid.jpg"
-                type="image/jpeg"
-              />
-              <img
-                class="logo-humanoid"
-                loading="lazy"
-                src="build/img/home/logo_humanoid.jpg"
-                alt="Logo"
-              />
-            </picture>
-          </div>
-        </div>
+      </div>
+      <div class="mail">
+        For more information, please contact rita.fuentes@tec.mx
       </div>
     </main>
+    <footer class="bg-dark text-light">
+      All rights reserved 2022 ©
+    </footer>
 
     <script src="build/js/bundle.min.js"></script>
   </body>

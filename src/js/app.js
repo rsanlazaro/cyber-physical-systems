@@ -46,3 +46,16 @@
 //   document.getElementById("main_nav").classList.remove("sidebar-show");
 // }
 // DOMContentLoaded  end
+
+document.addEventListener("DOMContentLoaded", function () {
+
+var map = L.map('map').setView([20.737011, -103.452432], 11);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([20.737011, -103.452432]).addTo(map)
+    // .bindPopup('')
+    // .openPopup();
+});

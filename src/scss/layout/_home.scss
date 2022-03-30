@@ -17,24 +17,6 @@ main {
 .home-div {
   margin-top: 2.5rem;
   margin-bottom: 5rem;
-  .imagen {
-    margin: 2rem;
-    @include m.tablet {
-      margin: unset;
-    }
-  }
-  @include m.tablet {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    column-gap: 3rem;
-  }
-  @include m.desktop {
-    grid-template-columns: 3fr 1fr;
-    margin-top: 5rem;
-  }
-  @include m.desktopXL {
-    margin-top: 7.5rem;
-  }
 }
 
 .home-left {
@@ -48,107 +30,100 @@ main {
       width: 70%;
     }
   }
-  h2 {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-  }
-  @include m.tablet {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
 }
 
-.home-right {
-  margin-left: auto;
-  margin-right: auto;
-  width: 20rem;
-  @include m.tablet {
-    width: unset;
-  }
-}
-
-.info {
-  margin-bottom: 4rem;
-  @include m.tablet {
-    height: 20rem;
-  }
-  @include m.desktopXL {
-    margin-bottom: 10rem;
-  }
-  text-align: center;
-  list-style-position: inside;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  li {
-    padding: 1rem 0.5rem;
-  }
-}
-
-.home-3D,
-.home-exo,
-.home-humanoid {
-  display: flex;
-  p {
-    color: v.$oscuro;
-  }
+.home-div {
   .imagen {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.project {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  flex-direction: column;
-  .text-project {
-    order: 1;
-    p {
-      text-align: justify;
-      padding-top: 1rem;
+    padding: 1rem 1rem 3rem 1rem;
+    @include m.telefono {
+      padding: 0 13rem 3rem 13rem;
+    }
+    @include m.desktop {
+      padding: 1rem 25rem 5rem 25rem;
+    }
+    @include m.desktopXL {
+      padding: 1rem 30% 5rem 30%;
     }
   }
-  .imagen-project {
-    order: 2;
-  }
+}
+
+.accordion-image {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
   .logo-exo {
-    width: 17rem;
-    padding: 2rem 4rem;
-    @include m.telefono {
-      width: 20rem;
+    width: 10rem;
+    @include m.desktopXL {
+      width: 15rem
     }
   }
   .logo-3D,
   .logo-humanoid {
-    padding: 2rem;
     @include m.telefono {
-      width: 70vw;
+      width: 22rem; 
     }
     @include m.tablet {
-      width: 100%;
+      width: 25rem; 
     }
-  }
-  @include m.tablet {
-    flex-direction: row;
-    .text-project {
-      order: unset;
-    }
-    .imagen-project {
-      order: unset;
+    @include m.desktopXL {
+      width: 35rem;
     }
   }
 }
 
-.home-3D,
-.home-humanoid {
-  .imagen-project {
-    @include m.tablet {
-      width: 250rem;
+.accordion{
+  @include m.desktopXL {
+    width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.accordion-body {
+  @include m.desktop {
+    display: flex;
+    .accordion-image {
+      padding: 0 2rem 0 2rem;
     }
-    @include m.desktopXL {
-      width: 150rem;
+    .accordion-3D {
+      order: -1;
     }
   }
+}
+
+.home-location {
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 5rem;
+  }
+}
+
+.location-image {
+  display: none;
+  @include m.tablet {
+    display: block;
+  }
+}
+
+#map {
+  height: 100vw;
+  @include m.telefono {
+    height: 50vw;
+  }
+  @include m.tablet {
+    height: auto;
+  }
+}
+
+.mail {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem 0;
 }
