@@ -5,6 +5,13 @@
   background-color: transparent;
 }
 
+.navbar {
+  @include m.tablet {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
 .navbar-brand {
   display: inline-block;
   line-height: 1;
@@ -35,14 +42,14 @@
     padding-right: 0.4rem;
   }
   @include m.desktopXL {
-    padding-right: 2rem
+    padding-right: 2rem;
   }
 }
 
 @include m.desktop {
   .dropdown-menu li {
     position: relative;
-    &:hover{
+    &:hover {
       background-color: v.$secundario;
     }
   }
@@ -111,6 +118,12 @@
   display: block;
   @include m.desktop {
     display: none;
+  }
+  .navbar-toggler-icon {
+    @include m.tablet {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 }
 
@@ -234,7 +247,7 @@
   padding-left: 1rem;
 }
 
-.nav-item-close-news{
+.nav-item-close-news {
   position: relative;
   a {
     position: absolute;
@@ -252,7 +265,7 @@
   }
 }
 
-.nav-item-close-research{
+.nav-item-close-research {
   position: relative;
   a {
     position: absolute;
