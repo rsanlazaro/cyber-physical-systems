@@ -18,7 +18,7 @@ function displayStudents() {
     .then((data) => (obj = data))
     .then(() => {
       obj.forEach((element) => {
-        if ((degrees.includes(element.degree)) && (!element.graduated)) {
+        if (degrees.includes(element.degree) && !element.graduated) {
           const studentsGrid = document.querySelector(
             ".accordion-student-" + element.degree
           );
@@ -43,7 +43,7 @@ function displayStudents() {
         }
       });
       obj.forEach((element) => {
-        if ((degrees.includes(element.degree)) && (element.graduated)) {
+        if (degrees.includes(element.degree) && element.graduated) {
           const studentsGrid = document.querySelector(
             `.accordion-student-${element.degree}-graduated`
           );
@@ -52,7 +52,9 @@ function displayStudents() {
             <div class="imagen">
                 <img loading="lazy" src="build/img/students/${element.name
                   .split(" ")
-                  .join(
+                  .join("")
+                  .replace(
+                    /,/g,
                     ""
                   )}.webp" alt="Student" onerror="this.onerror=null; this.src='build/img/students/default.png'">
                   </div>
