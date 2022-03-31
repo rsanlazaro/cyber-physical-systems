@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Juan Carlos Bello Robles",
+        "programme": "DCA-CINVESTAV-GDA",
+        "co_advisor": "Co-Advisor with Dr. Ruiz",
+        "graduated": false,
+        "degree": "phd"
+    },
+    {
+        "name": "Javier Félix Rendón",
+        "programme": "DCI-Tec de Monterrey",
+        "co_advisor": " ",
+        "graduated": false,
+        "degree": "phd"
+    },
+    {
+        "name": "Gabriela Durán",
+        "programme": "DI-UP-GDA",
+        "co_advisor": "Co-Advisor with Dr. Rosa",
+        "graduated": false,
+        "degree": "phd"
+    },
+    {
+        "name": "Mariana Sofía Flores Jiménez",
+        "programme": "DCI-Tec de Monterrey",
+        "co_advisor": "Co-Advisor with Dr. García",
+        "graduated": false,
+        "degree": "phd"
+    },
+    {
+        "name": "Israel Guarneros",
+        "programme": "DCI-Tec de Monterrey",
+        "co_advisor": " ",
+        "graduated": false,
+        "degree": "phd"
+    },
+    {
+        "name": "Alicia Lazcano",
+        "programme": "DCC-Tec de Monterrey",
+        "co_advisor": "Co-Advisor with Dr. Alfaro",
+        "graduated": false,
+        "degree": "phd"
+    },
+    {
+        "name": "Andrés Fernando García Calle",
+        "programme": "DCC-Tec de Monterrey",
+        "co_advisor": " ",
+        "graduated": false,
+        "degree": "phd"
+    },
+    {
+        "name": "You can be here!",
+        "programme": "DCI-DCC",
+        "co_advisor": " ",
+        "graduated": false,
+        "degree": "phd"
+    }
+]
