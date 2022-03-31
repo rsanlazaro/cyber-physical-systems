@@ -4,55 +4,423 @@
         "programme": "DCA-CINVESTAV-GDA",
         "co_advisor": "Co-Advisor with Dr. Ruiz",
         "graduated": false,
-        "degree": "phd"
+        "degree": "phd",
+        "graduation": ""
     },
     {
         "name": "Javier Félix Rendón",
         "programme": "DCI-Tec de Monterrey",
         "co_advisor": " ",
         "graduated": false,
-        "degree": "phd"
+        "degree": "phd",
+        "graduation": " "
     },
     {
         "name": "Gabriela Durán",
         "programme": "DI-UP-GDA",
         "co_advisor": "Co-Advisor with Dr. Rosa",
         "graduated": false,
-        "degree": "phd"
+        "degree": "phd",
+        "graduation": " "
     },
     {
         "name": "Mariana Sofía Flores Jiménez",
         "programme": "DCI-Tec de Monterrey",
         "co_advisor": "Co-Advisor with Dr. García",
         "graduated": false,
-        "degree": "phd"
+        "degree": "phd",
+        "graduation": " "
     },
     {
         "name": "Israel Guarneros",
         "programme": "DCI-Tec de Monterrey",
         "co_advisor": " ",
         "graduated": false,
-        "degree": "phd"
+        "degree": "phd",
+        "graduation": " "
     },
     {
         "name": "Alicia Lazcano",
         "programme": "DCC-Tec de Monterrey",
         "co_advisor": "Co-Advisor with Dr. Alfaro",
         "graduated": false,
-        "degree": "phd"
+        "degree": "phd",
+        "graduation": " "
     },
     {
         "name": "Andrés Fernando García Calle",
         "programme": "DCC-Tec de Monterrey",
         "co_advisor": " ",
         "graduated": false,
-        "degree": "phd"
+        "degree": "phd",
+        "graduation": " "
+    },
+    {
+        "name": "Carmen Orozco",
+        "programme": "MCC-Tec de Monterrey",
+        "co_advisor": "Co-Advisor with Dr. Gustavo Hernández",
+        "graduated": false,
+        "degree": "master",
+        "graduation": " "
+    },
+    {
+        "name": "Andrés García Escalante",
+        "programme": "MCC-Tec de Monterrey",
+        "co_advisor": "",
+        "graduated": false,
+        "degree": "master",
+        "graduation": " "
+    },
+    {
+        "name": "Marina Ruelas",
+        "programme": "MCI-Tec de Monterrey",
+        "co_advisor": "Co-Advisor with Dr. Medina",
+        "graduated": false,
+        "degree": "master",
+        "graduation": " "
+    },
+    {
+        "name": "Daniela Oceguera",
+        "programme": "MCI-Tec de Monterrey",
+        "co_advisor": "Co-Advisor with Dr. Gustavo Hernández",
+        "graduated": false,
+        "degree": "master",
+        "graduation": " "
+    },
+    {
+        "name": "Alejandro Palma Zubia",
+        "programme": "MCI-Tec de Monterrey",
+        "co_advisor": "Co-Advisor with Dr. Oscar Carbajal",
+        "graduated": false,
+        "degree": "master",
+        "graduation": " "
+    },
+    {
+        "name": "Juan de Dios Durán Hernández",
+        "programme": "MCI-Tec de Monterrey",
+        "co_advisor": "Co-Advisor with Dr. Oscar Carbajal",
+        "graduated": false,
+        "degree": "master",
+        "graduation": " "
+    },
+    {
+        "name": "Emanuel de la Cruz Espinosa",
+        "programme": "MCC-Tec de Monterrey",
+        "co_advisor": "",
+        "graduated": false,
+        "degree": "master",
+        "graduation": " "
+    },
+    {
+        "name": "Diana Ramírez",
+        "programme": "MCI-Tec de Monterrey",
+        "co_advisor": "Co-Advisor with Dr. Cuan",
+        "graduated": false,
+        "degree": "master",
+        "graduation": " "
+    },
+    {
+        "name": "Jesús Alejandro Díaz Hernández",
+        "programme": "DCA-CINVESTAV-GDL",
+        "co_advisor": "Co-Advisor with Dr. Javier Ruíz",
+        "graduated": false,
+        "degree": "master",
+        "graduation": " "
+    },
+    {
+        "name": "Marcos Romo",
+        "programme": "Universidad Autónoma de Querétaro",
+        "co_advisor": "Co-Advisor with Dr. Juvenal and MSc Luz María Sánchez",
+        "graduated": false,
+        "degree": "master",
+        "graduation": " "
+    },
+    {
+        "name": "Rafael Pérez San Lázaro",
+        "programme": "MCI-Tec de Monterrey",
+        "co_advisor": "Co-Advisor with Dr. Chairez",
+        "graduated": true,
+        "degree": "master",
+        "graduation": "Graduated in December 2021"
+    },
+    {
+        "name": "Mariana Sofía Flores Jiménez",
+        "programme": "MCI-Tec de Monterrey",
+        "co_advisor": "Co-Advisor with Dr. Cárdenas",
+        "graduated": true,
+        "degree": "master",
+        "graduation": "Graduated in June 2020"
+    },
+    {
+        "name": "Javier Félix Rendón",
+        "programme": "MCI-Tec de Monterrey",
+        "co_advisor": "",
+        "graduated": true,
+        "degree": "master",
+        "graduation": "Graduated in November 2019"
+    },
+    {
+        "name": "Rosario Ibarra Carlos",
+        "programme": "MSI-Tec de Monterrey",
+        "co_advisor": "Co-Advisor with Dra. Alonso",
+        "graduated": true,
+        "degree": "master",
+        "graduation": "Graduated in December 2018"
+    },
+    {
+        "name": "Jesús Haro Sánchez",
+        "programme": "MSE-Tec de Monterrey",
+        "co_advisor": "",
+        "graduated": true,
+        "degree": "master",
+        "graduation": "Graduated in March 2017"
+    },
+    {
+        "name": "Joel Ruíz Rojas",
+        "programme": "MSE-Tec de Monterrey",
+        "co_advisor": "",
+        "graduated": true,
+        "degree": "master",
+        "graduation": "Graduated in May 2017"
+    },
+    {
+        "name": "Ricardo Díaz Domínguez",
+        "programme": "MCC-Tec de Monterrey",
+        "co_advisor": "Co-Advisor with Dr. García",
+        "graduated": true,
+        "degree": "master",
+        "graduation": "Graduated in May 2016"
+    },
+    {
+        "name": "Omar Aguilar Leal",
+        "programme": "MCC-Tec de Monterrey",
+        "co_advisor": "Co-Advisor with Dr. Huegel",
+        "graduated": true,
+        "degree": "master",
+        "graduation": "Graduated in October 2015"
+    },
+    {
+        "name": "Erick Solorio",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": false,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "María Yepiz",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": false,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Valeria Naranjo",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": false,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Mariana Acosta",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": "Graduated in June 2020"
+    },
+    {
+        "name": "Luz Páramo",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": "Graduated in June 2020"
+    },
+    {
+        "name": "Gisel Sánchez",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": "Graduated in June 2020"
+    },
+    {
+        "name": "Fernando Reyes",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": "Graduated in December 2019"
+    },
+    {
+        "name": "Monserrat Bernal",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": "Graduated in December 2019"
+    },
+    {
+        "name": "Pedro Chavarrías",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Daniela Rosales",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Ever Olivares",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Fernanda Mazín",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Estefanía Langarica",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Kenya Morales",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Ilse, Enrique, Carlos",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Julia López",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Dulce Ramírez",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Lourdes, Erick, Daniela",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Carlos Fajardo",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Víctor Castillo Madrigal",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Juan Diego Ramírez",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Mario González",
+        "programme": "Biomedical Engineering",
+        "co_advisor": "Tecnológico de Monterrey",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": ""
+    },
+    {
+        "name": "Lorena Roldán",
+        "programme": "Bionical Engineering",
+        "co_advisor": "Instituto Politécnico Nacional",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": "Graduated in 2018"
+    },
+    {
+        "name": "Carmen Orozco",
+        "programme": "Bionical Engineering",
+        "co_advisor": "Instituto Politécnico Nacional",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": "Graduated in 2018"
+    },
+    {
+        "name": "Alejandra Guillén",
+        "programme": "Data Science",
+        "co_advisor": "Universidad Nacional Autónoma de México",
+        "graduated": true,
+        "degree": "undergraduate",
+        "graduation": "Pending graduation"
     },
     {
         "name": "You can be here!",
         "programme": "DCI-DCC",
         "co_advisor": " ",
         "graduated": false,
-        "degree": "phd"
+        "degree": "phd",
+        "graduation": " "
+    },
+    {
+        "name": "You can be here!",
+        "programme": "DCI-DCC",
+        "co_advisor": " ",
+        "graduated": false,
+        "degree": "master",
+        "graduation": " "
+    },
+    {
+        "name": "You can be here!",
+        "programme": "DCI-DCC",
+        "co_advisor": " ",
+        "graduated": false,
+        "degree": "undergraduate",
+        "graduation": " "
     }
 ]

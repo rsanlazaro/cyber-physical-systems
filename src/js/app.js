@@ -12,35 +12,63 @@ document.addEventListener("DOMContentLoaded", function () {
 displayStudents();
 
 function displayStudents() {
-  degrees = ['phd','master','undergraduate'];
+  degrees = ["phd", "master", "undergraduate"];
   fetch("./students.json")
     .then((res) => res.json())
     .then((data) => (obj = data))
     .then(() => {
       obj.forEach((element) => {
-        if (degrees.includes(element.degree)) {
-            const studentsGrid = document.querySelector(".accordion-student-" + element.degree);
-            const imagen = document.createElement("div");
-            imagen.innerHTML = `
-          <picture>
-                <source srcset="build/img/students/${element.name
-                  .split(" ")
-                  .join("")}.avif" type="image/avif">
-                <source srcset="build/img/students/${element.name
-                  .split(" ")
-                  .join("")}.webp" type="image/webp">
+        if ((degrees.includes(element.degree)) && (!element.graduated)) {
+          const studentsGrid = document.querySelector(
+            ".accordion-student-" + element.degree
+          );
+          const imagen = document.createElement("div");
+          imagen.innerHTML = `
+            <div class="imagen">
                 <img loading="lazy" src="build/img/students/${element.name
                   .split(" ")
-                  .join("")}.jpg" alt="Student">
-          </picture>
+                  .join(
+                    ""
+                  )}.webp" alt="Student" onerror="this.onerror=null; this.src='build/img/students/default.png'">
+                  </div>
           <div class="student-description">
-              <h4>${element.name}</h4>
+              <h4><strong>${element.name}</strong></h4>
               <p>${element.programme}</p>
               <p>${element.co_advisor}</p>
+              <p>${element.graduation}</p>
           </div>
           `;
-            studentsGrid.appendChild(imagen);
-            imagen.classList.add("imagen");
+          studentsGrid.appendChild(imagen);
+          studentsGrid.classList.remove("no-display");
+        }
+      });
+      obj.forEach((element) => {
+        if ((degrees.includes(element.degree)) && (element.graduated)) {
+          const studentsGrid = document.querySelector(
+            `.accordion-student-${element.degree}-graduated`
+          );
+          const imagen = document.createElement("div");
+          imagen.innerHTML = `
+            <div class="imagen">
+                <img loading="lazy" src="build/img/students/${element.name
+                  .split(" ")
+                  .join(
+                    ""
+                  )}.webp" alt="Student" onerror="this.onerror=null; this.src='build/img/students/default.png'">
+                  </div>
+          <div class="student-description">
+              <h4><strong>${element.name}</strong></h4>
+              <p>${element.programme}</p>
+              <p>${element.co_advisor}</p>
+              <p>${element.graduation}</p>
+          </div>
+          `;
+          studentsGrid.appendChild(imagen);
+          const blueBg = document.querySelector(
+            `.accordion-student-${element.degree}-graduated`
+          );
+          blueBg.classList.add("blueBg");
+          studentsGrid.classList.remove("no-display");
         }
       });
     });
