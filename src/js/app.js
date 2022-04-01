@@ -87,7 +87,7 @@ function displayResearchers() {
           const researchersList = document.querySelector(".collaboration-text");
           const list = document.createElement("p");
           list.innerHTML = `
-          <span> ${element2.name} </span> - ${element2.university}
+          <span class="researcher-name"> ${element2.name} </span> <span class="hyphen"> - </span> ${element2.university}
           `;
           researchersList.appendChild(list);
       });
