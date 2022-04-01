@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 displayStudents();
+displayResearchers();
 
 function displayStudents() {
   degrees = ["phd", "master", "undergraduate"];
@@ -72,6 +73,23 @@ function displayStudents() {
           blueBg.classList.add("blueBg");
           studentsGrid.classList.remove("no-display");
         }
+      });
+    });
+}
+
+
+function displayResearchers() {
+  fetch("./researchers.json")
+    .then((res2) => res2.json())
+    .then((data2) => (obj2 = data2))
+    .then(() => {
+      obj2.forEach((element2) => {
+          const researchersList = document.querySelector(".collaboration-text");
+          const list = document.createElement("p");
+          list.innerHTML = `
+          <span> ${element2.name} </span> - ${element2.university}
+          `;
+          researchersList.appendChild(list);
       });
     });
 }

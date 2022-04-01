@@ -9,6 +9,7 @@
   @include m.tablet {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-left: 0.5rem;
   }
 }
 
@@ -167,24 +168,33 @@
 .offcanvas-header,
 .offcanvas-body {
   padding: 0 2.5rem 0 2rem;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   overflow-y: unset;
   @include m.telefono {
     font-size: 1.5rem;
+  }
+  a {
+    font-size: 1.1rem;
+    @include m.telefono {
+      font-size: 1.4rem;
+    }
   }
 }
 
 .offcanvas-header {
   padding-top: 2rem;
-  .btn-close {
-    margin-right: 2rem;
-  }
+  // .btn-close {
+  //   margin-right: 2rem;
+  // }
 }
 
 .offcanvas-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   @include m.telefono {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+  }
+  @include m.tablet {
+    font-size: 1.7rem;
   }
 }
 

@@ -54,16 +54,16 @@ main {
   .logo-exo {
     width: 10rem;
     @include m.desktopXL {
-      width: 15rem
+      width: 15rem;
     }
   }
   .logo-3D,
   .logo-humanoid {
     @include m.telefono {
-      width: 22rem; 
+      width: 22rem;
     }
     @include m.tablet {
-      width: 25rem; 
+      width: 25rem;
     }
     @include m.desktopXL {
       width: 35rem;
@@ -71,11 +71,11 @@ main {
   }
 }
 
-.accordion-title{
+.accordion-title {
   margin-bottom: 3rem;
 }
 
-.accordion{
+.accordion {
   @include m.desktopXL {
     width: 90rem;
     margin-left: auto;
@@ -124,4 +124,16 @@ address {
   text-align: center;
   // font-weight: bold;
   margin-top: 2rem;
+  a {
+    font-size: 1.2rem;;
+    @include m.telefono {
+      font-size: 1.35rem;
+    }
+    @include m.tablet {
+      font-size: 1.5rem;
+    }
+    @include m.desktop {
+      font-size: 1.75rem;
+    }
+  }
 }
