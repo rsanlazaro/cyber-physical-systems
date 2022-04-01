@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
+  createGallery();
+  // displayStudents();
+  // displayResearchers();
+
   var map = L.map("map").setView([20.737011, -103.452432], 11);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -8,9 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   L.marker([20.737011, -103.452432]).addTo(map);
 });
-
-displayStudents();
-displayResearchers();
 
 function displayStudents() {
   degrees = ["phd", "master", "undergraduate"];
@@ -77,19 +78,68 @@ function displayStudents() {
     });
 }
 
-
 function displayResearchers() {
   fetch("./researchers.json")
     .then((res2) => res2.json())
     .then((data2) => (obj2 = data2))
     .then(() => {
       obj2.forEach((element2) => {
-          const researchersList = document.querySelector(".collaboration-text");
-          const list = document.createElement("p");
-          list.innerHTML = `
+        const researchersList = document.querySelector(".collaboration-text");
+        const list = document.createElement("p");
+        list.innerHTML = `
           <span class="researcher-name"> ${element2.name} </span> <span class="hyphen"> - </span> ${element2.university}
           `;
-          researchersList.appendChild(list);
+        researchersList.appendChild(list);
       });
     });
+}
+
+function createGallery() {
+  const galeria = document.querySelector(".galeria-imagenes");
+
+  for (let i = 1; i <= 5; i++) {
+    const imagen = document.createElement("div");
+    imagen.innerHTML = `
+          <img src="build/img/divulgation/gallery/${i}.webp" alt="Image">
+      `;
+    imagen.onclick = function () {
+      showImage(i);
+    };
+
+    galeria.appendChild(imagen);
+    console.log("listo");
+  }
+}
+
+function showImage(i) {
+  const imagen = document.createElement("div");
+  imagen.innerHTML = `
+    <img src="build/img/divulgation/gallery/${i}.webp" alt="Image">
+  `;
+
+  // Crea el Overlay con la imagen
+  const overlay = document.createElement("DIV");
+  overlay.appendChild(imagen);
+  overlay.classList.add("overlay");
+  overlay.onclick = function () {
+    const body = document.querySelector("body");
+    body.classList.remove("fijar-body");
+    overlay.remove();
+  };
+
+  // Boton para cerrar el Modal
+  const cerrarModal = document.createElement("P");
+  cerrarModal.textContent = "X";
+  cerrarModal.classList.add("btn-cerrar");
+  cerrarModal.onclick = function () {
+    const body = document.querySelector("body");
+    body.classList.remove("fijar-body");
+    overlay.remove();
+  };
+  overlay.appendChild(cerrarModal);
+
+  // Añadirlo al HTML
+  const body = document.querySelector("body");
+  body.appendChild(overlay);
+  body.classList.add("fijar-body");
 }
