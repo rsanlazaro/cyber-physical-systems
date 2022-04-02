@@ -10,7 +10,7 @@
     /* Set a specific height */
     height: 15rem;
     @include m.tablet {
-        height: 20rem;
+        height: 30rem;
     }
     @include m.desktop {
         height: 40rem;
@@ -39,6 +39,9 @@
     transform: translate(-50%, -50%);
     @include m.telefono {
         font-size: 2.4rem;
+    }
+    @include m.tablet {
+        top: 62.5%;
     }
     @include m.desktop {
         font-size: 5rem;
