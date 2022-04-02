@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   displayStudents();
   displayResearchers();
+  displayPatents();
   createGallery();
 });
 
@@ -131,4 +132,36 @@ function showImage(i) {
   const body = document.querySelector("body");
   body.appendChild(overlay);
   body.classList.add("fijar-body");
+}
+
+function displayPatents() {
+  fetch("./patents.json")
+    .then((resPatents) => resPatents.json())
+    .then((dataPatents) => (objPatents = dataPatents))
+    .then(() => {
+      objPatents.forEach((patent) => {
+        const patentsList = document.querySelector(".patents-text");
+        const patentData = document.createElement("li");
+        patentData.innerHTML = `
+          ${patent.name} <span class="patent-state"> ${patent.state} </span>
+          <p class="patent-link"> Available at: <a href="${patent.link}">${patent.link}</a></p>
+          `;
+        const patentState = patentData.querySelector(".patent-state");
+        const patentLink = patentData.querySelector(".patent-link");
+        if (patent.state == "Granted") {
+          patentState.classList.add("granted");
+        } else {
+          patentState.classList.add("pending");
+        }
+        if(patent.link) {
+          patentLink.classList.add("d-block");
+        }else{
+          patentLink.classList.add("d-none");
+        }
+        patentData.classList.add("list-group-item");
+        patentsList.appendChild(patentData);
+        // const patentElement = document.querySelector("li");
+        // patientElement.classList.add("list-group-item");
+      });
+    });
 }
