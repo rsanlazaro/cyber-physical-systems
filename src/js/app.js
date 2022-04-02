@@ -2,8 +2,24 @@ document.addEventListener("DOMContentLoaded", function () {
   displayStudents();
   displayResearchers();
   displayPatents();
-  createGallery();
+  const divulgation = document.querySelector(".divulgation");
+  if(!divulgation) {
+    displayMap();
+  }else{
+    createGallery();
+  }
 });
+
+function displayMap() {
+  var map = L.map("map").setView([20.737011, -103.452432], 11);
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map);
+
+  L.marker([20.737011, -103.452432]).addTo(map);
+}
 
 function displayStudents() {
   degrees = ["phd", "master", "undergraduate"];
@@ -153,9 +169,9 @@ function displayPatents() {
         } else {
           patentState.classList.add("pending");
         }
-        if(patent.link) {
+        if (patent.link) {
           patentLink.classList.add("d-block");
-        }else{
+        } else {
           patentLink.classList.add("d-none");
         }
         patentData.classList.add("list-group-item");
