@@ -13,6 +13,12 @@
   }
 }
 
+// nav {
+//   .dropdown-item {
+//     font-size: 1rem;
+//   }
+// }
+
 .navbar-brand {
   display: inline-block;
   line-height: 1;
@@ -79,11 +85,14 @@
   &:hover {
     background-color: #212529;
   }
-  @include m.desktopXL {
-    font-size: 1.4rem;
+  @include m.desktop {
+    font-size: 1.2rem;
     padding-top: 1rem;
     padding-bottom: 0.5rem;
     padding-left: 2rem;
+  }
+  @include m.desktopXL {
+    font-size: 1.4rem;
   }
 }
 

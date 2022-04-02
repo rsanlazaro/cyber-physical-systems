@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  displayStudents();
+  displayResearchers();
   createGallery();
-  // displayStudents();
-  // displayResearchers();
 
   var map = L.map("map").setView([20.737011, -103.452432], 11);
 
@@ -98,28 +98,26 @@ function createGallery() {
   const galeria = document.querySelector(".galeria-imagenes");
 
   for (let i = 1; i <= 5; i++) {
-    const imagen = document.createElement("div");
-    imagen.innerHTML = `
+    const galleryImage = document.createElement("div");
+    galleryImage.innerHTML = `
           <img src="build/img/divulgation/gallery/${i}.webp" alt="Image">
       `;
-    imagen.onclick = function () {
+    galleryImage.onclick = function () {
       showImage(i);
     };
-
-    galeria.appendChild(imagen);
-    console.log("listo");
+    galeria.appendChild(galleryImage);
   }
 }
 
 function showImage(i) {
-  const imagen = document.createElement("div");
-  imagen.innerHTML = `
+  const showImage = document.createElement("div");
+  showImage.innerHTML = `
     <img src="build/img/divulgation/gallery/${i}.webp" alt="Image">
   `;
 
   // Crea el Overlay con la imagen
   const overlay = document.createElement("DIV");
-  overlay.appendChild(imagen);
+  overlay.appendChild(showImage);
   overlay.classList.add("overlay");
   overlay.onclick = function () {
     const body = document.querySelector("body");
