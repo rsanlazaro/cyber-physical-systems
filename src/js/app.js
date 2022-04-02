@@ -1,13 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-  displayStudents();
-  displayResearchers();
-  displayPatents();
-  const divulgation = document.querySelector(".divulgation");
-  if(!divulgation) {
+  const view = document.querySelector(".hero-text").innerText;
+  console.log(view);
+  if (view == "Home") {
     displayMap();
-  }else{
+  } else if (view == "Students") {
+    displayStudents();
+  } else if (view == "Collaboration") {
+    displayResearchers();
+  } else if (view == "Papers and patents") {
+    displayPatents();
+  } else if (view == "Divulgation") {
     createGallery();
-  }
+  } else if (view == "Undergraduate projects") {
+    displayUndergraduate();
+  } else if (view == "Master's projects") {
+    displaymaster();
+  } else if (view == "Phd projects") {
+    displayphd();
+  } 
 });
 
 function displayMap() {
@@ -178,6 +188,102 @@ function displayPatents() {
         patentsList.appendChild(patentData);
         // const patentElement = document.querySelector("li");
         // patientElement.classList.add("list-group-item");
+      });
+    });
+}
+
+function displayUndergraduate() {
+  fetch("./projects.json")
+    .then((resUndergraduate) => resUndergraduate.json())
+    .then((dataUndergraduate) => (objUndergraduate = dataUndergraduate))
+    .then(() => {
+      objUndergraduate.forEach((undergraduateProject) => {
+        if (undergraduateProject.degree == "undergraduate") {
+          const undergraduateGrid = document.querySelector(".main-container");
+          const imagenUndergraduate = document.createElement("div");
+          imagenUndergraduate.innerHTML = `
+            <div>
+              <img
+                class="card-img-top"
+                src="build/img/projects/${undergraduateProject.image}.webp"
+                alt="Card image cap"
+                onerror="this.onerror=null; this.src='build/img/projects/default.png'"
+              />
+              <div class="card-body">
+                <h2 class="card-title">${undergraduateProject.name}</h2>
+                <p class="card-text">
+                  ${undergraduateProject.description}
+                </p>
+              </div>
+            </div>
+          `;
+          imagenUndergraduate.classList.add("card");
+          undergraduateGrid.appendChild(imagenUndergraduate);
+        }
+      });
+    });
+}
+
+function displaymaster() {
+  fetch("./projects.json")
+    .then((resmaster) => resmaster.json())
+    .then((datamaster) => (objmaster = datamaster))
+    .then(() => {
+      objmaster.forEach((masterProject) => {
+        if (masterProject.degree == "master") {
+          const masterGrid = document.querySelector(".main-container");
+          const imagenmaster = document.createElement("div");
+          imagenmaster.innerHTML = `
+            <div>
+              <img
+                class="card-img-top"
+                src="build/img/projects/${masterProject.image}.webp"
+                alt="Card image cap"
+                onerror="this.onerror=null; this.src='build/img/projects/default.png'"
+              />
+              <div class="card-body">
+                <h2 class="card-title">${masterProject.name}</h2>
+                <p class="card-text">
+                  ${masterProject.description}
+                </p>
+              </div>
+            </div>
+          `;
+          imagenmaster.classList.add("card");
+          masterGrid.appendChild(imagenmaster);
+        }
+      });
+    });
+}
+
+function displayphd() {
+  fetch("./projects.json")
+    .then((resphd) => resphd.json())
+    .then((dataphd) => (objphd = dataphd))
+    .then(() => {
+      objphd.forEach((phdProject) => {
+        if (phdProject.degree == "phd") {
+          const phdGrid = document.querySelector(".main-container");
+          const imagenphd = document.createElement("div");
+          imagenphd.innerHTML = `
+            <div>
+              <img
+                class="card-img-top"
+                src="build/img/projects/${phdProject.image}.webp"
+                alt="Card image cap"
+                onerror="this.onerror=null; this.src='build/img/projects/default.png'"
+              />
+              <div class="card-body">
+                <h2 class="card-title">${phdProject.name}</h2>
+                <p class="card-text">
+                  ${phdProject.description}
+                </p>
+              </div>
+            </div>
+          `;
+          imagenphd.classList.add("card");
+          phdGrid.appendChild(imagenphd);
+        }
       });
     });
 }
