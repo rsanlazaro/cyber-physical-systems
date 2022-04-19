@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
     displaymaster();
   } else if (view == "Phd projects") {
     displayphd();
-  } 
+  } else if (view == "Press") {
+    displayPress();
+  }
 });
 
 function displayMap() {
@@ -114,23 +116,26 @@ function displayResearchers() {
 
 function createGallery() {
   const galeria = document.querySelector(".galeria-imagenes");
-
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= 50; i++) {
     const galleryImage = document.createElement("div");
     galleryImage.innerHTML = `
-          <img src="build/img/divulgation/gallery/${i}.webp" alt="Image">
+          <img src="build/img/divulgation/gallery/${i}.webp" alt="Image" onerror="this.onerror=null; this.src='build/img/divulgation/gallery/not-found.jpg'">
       `;
-    galleryImage.onclick = function () {
-      showImage(i);
-    };
-    galeria.appendChild(galleryImage);
+    fetch(`./build/img/divulgation/gallery/${i}.webp`).then((res2) => {
+      if (res2.ok) {
+        galleryImage.onclick = function () {
+          showImage(i);
+        };
+        galeria.appendChild(galleryImage);
+      }
+    });
   }
 }
 
 function showImage(i) {
   const showImage = document.createElement("div");
   showImage.innerHTML = `
-    <img src="build/img/divulgation/gallery/${i}.webp" alt="Image">
+    <img src="build/img/divulgation/gallery/${i}.webp" alt="Image" onerror="this.onerror=null; this.src='build/img/divulgation/gallery/not-found.jpg'">
   `;
 
   // Crea el Overlay con la imagen
@@ -188,6 +193,37 @@ function displayPatents() {
         patentsList.appendChild(patentData);
         // const patentElement = document.querySelector("li");
         // patientElement.classList.add("list-group-item");
+      });
+    });
+}
+
+function displayPress() {
+  fetch("./press.json")
+    .then((resPress) => resPress.json())
+    .then((dataPress) => (objPress = dataPress))
+    .then(() => {
+      objPress.forEach((PressProject) => {
+          const PressGrid = document.querySelector(".main-container");
+          const imagenPress = document.createElement("div");
+          imagenPress.innerHTML = `
+            <a
+              href="${PressProject.link}"
+            >
+            <img
+              class="card-img-top"
+              src="build/img/news/${PressProject.image}.webp"
+              alt="Card image cap"
+            />
+              <div class="card-body">
+                <h2 class="card-title">${PressProject.title}</h2>
+                <p class="card-text">
+                ${PressProject.description}
+                </p>
+              </div>
+            </a>
+          `;
+          imagenPress.classList.add("card");
+          PressGrid.appendChild(imagenPress);
       });
     });
 }
