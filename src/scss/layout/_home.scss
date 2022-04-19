@@ -36,7 +36,7 @@ main {
   .imagen {
     padding: 1rem 1rem 3rem 1rem;
     @include m.telefono {
-      padding: 0 13rem 3rem 13rem;
+      padding: 0 7rem 3rem;
     }
     @include m.desktop {
       padding: 1rem 25rem 5rem 25rem;

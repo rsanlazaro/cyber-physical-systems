@@ -77,6 +77,7 @@
 }
 
 .dropdown-item {
+  width: unset;
   background-color: transparent;
   &:hover {
     background-color: #212529;
@@ -251,7 +252,7 @@
     color: v.$dark;
   }
   @include m.desktopXL {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
   }
 }
 
@@ -318,4 +319,15 @@
   @include m.desktopXL {
     left: 17.1rem !important;
   }
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.5rem;
+  vertical-align: 0.5rem;
+  content: "";
+  border-top: 0.5rem solid;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0;
+  border-left: 0.5rem solid transparent;
 }
